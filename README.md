@@ -20,11 +20,15 @@ Happy　Maternity
 <妊婦生活の記録を残したい、同じ状況の人の意見や悩みを聞きたい等>
 
 ## 設計書
-<・テーブル定義書
+・テーブル定義書
 https://docs.google.com/spreadsheets/d/10boJHYKJapXXlMK_s7QwBjWau_SjkDb1peW5Pv8Pilk/edit#gid=56678129>
+・詳細設計書
+https://docs.google.com/spreadsheets/d/18zyIqBSfS42GTQ8rFyiedf6hRyrg0f49/edit#gid=549108681
+・ER図
+https://app.diagrams.net/#G166wIqoubTekxlNwXn06alsWtFaKka82z
 
 ## チャレンジ要素一覧
-<https://docs.google.com/spreadsheets/d/1E4Quehglf9PxM1XTE-ft2X5-hJ5dmoJhsI-UJlgzVmY/edit#gid=0>
+<https://docs.google.com/spreadsheets/d/1cvgTkfApcymybDlUo4PWmUptC-NH6aU5Q223vPLwgAY/edit#gid=0>
 
 ## 開発環境
 - OS：Linux(CentOS)
