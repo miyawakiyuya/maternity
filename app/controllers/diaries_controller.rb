@@ -1,6 +1,6 @@
 class DiariesController < ApplicationController
   def index
-    @diaries = Diary.all
+    @diaries = current_user.diarys
   end
 
   def new
@@ -38,7 +38,7 @@ class DiariesController < ApplicationController
   private
 
   def diary_params
-    params.require(:diary).permit(:image,:title, :body)
+    params.require(:diary).permit(:user_id,:image,:title, :body)
   end
 
 end

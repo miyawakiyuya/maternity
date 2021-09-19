@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :posts do
+  resources :post_comments, only: [:create, :destroy]
+   resource :favorites, only: [:create, :destroy]
+  end
+
   resource :users, only: [:edit,:update]
   get 'users/my_page', to: 'users#show'
   patch 'users/my_page', to: 'users#show'
