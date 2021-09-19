@@ -7,9 +7,8 @@
   </p>
   <p>内容<%= diary.body %></p>
   <p>ユーザーネーム：<%= diary.user.name %></p>
-<li>
-<%= link_to "投稿編集", edit_diary_path(diary.id) %>
-</li>
-
 </div>
 <% end %>
+<li>
+<%= link_to '投稿フォーム', new_diary_path %>
+</li>
