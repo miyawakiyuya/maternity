@@ -1,0 +1,4 @@
+$("#favorite_area_<%= post.id %>").html("<%= j(render partial: 'favorites/favorite', locals: {post: @post) %>");
+
+// #likes_buttons_<%= @blog.id %>この部分のHTMLだけ、renderで部分的に更新するという処理です
+$('#likes_buttons_<%= @blog.id %>').html("<%= j(render partial: 'likes/like', locals: {blog: @blog}) %>");

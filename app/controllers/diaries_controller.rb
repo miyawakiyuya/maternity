@@ -14,7 +14,6 @@ class DiariesController < ApplicationController
   def create
     @diary = Diary.new(diary_params)
     @diary.user_id = current_user.id
-    @diary.start_time = Time.now
     @diary.save
     redirect_to diaries_path
 
@@ -22,7 +21,6 @@ class DiariesController < ApplicationController
 
   def show
      @diaries = current_user.diarys.where(start_time: params[:id].to_date.all_day)
-#    @diary = Diary.find(params[:id])
   end
 
   def edit
@@ -44,7 +42,7 @@ class DiariesController < ApplicationController
   private
 
   def diary_params
-    params.require(:diary).permit(:user_id,:image,:title, :body)
+    params.require(:diary).permit(:user_id, :image, :title, :body, :start_time)
   end
 
 end

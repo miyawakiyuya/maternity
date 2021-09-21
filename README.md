@@ -1,5 +1,4 @@
-# アプリ名
-  Happy Maternity
+# Happy Maternity
 
 ## サイト概要
 『Happy Maternity』では、妊婦生活の記録や体重管理機能、他のユーザーの方々と妊婦生活を共有する機能を導入しております。
@@ -59,4 +58,3 @@ https://app.diagrams.net/#G166wIqoubTekxlNwXn06alsWtFaKka82z
 ## 使用素材
 - 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
 - 使用しない場合は、使用素材の項目をREADMEから削除してください。
--

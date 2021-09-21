@@ -1,14 +1,16 @@
 <% @diaries.each do |diary| %>
 <div>
   <p><%= attachment_image_tag diary,:image , :fill, 150, 80 %></p>
-  <p>タイトル<%= link_to diary_path(diary.id) do %>
-  <%= diary.title %>
-  <% end %>
+  <p>タイトル
+     <%= diary.title %>
   </p>
   <p>内容<%= diary.body %></p>
   <p>ユーザーネーム：<%= diary.user.name %></p>
 <li>
 <%= link_to "投稿編集", edit_diary_path(diary.id) %>
+</li>
+<li>
+<%= link_to "投稿削除", diary_path(diary.id), method: :delete  %>
 </li>
 
 </div>

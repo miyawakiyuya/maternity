@@ -5,9 +5,9 @@
   <p>投稿日時：<%= @post.created_at.strftime('%Y/%m/%d') %></p>
   <% if @post.user == current_user %>
     <%= link_to "削除", post_path(@post), method: :delete %>
+    <%= link_to "投稿編集", edit_post_path %>
   <% end %>
-</div>
-<%= link_to "投稿編集", edit_post_path %>
+
 
 <div>
 <p>コメント件数：<%= @post.post_comments.count %></p>
@@ -17,19 +17,6 @@
   <%= post_comment.comment %>
   <% if post_comment.user == current_user %>
     <%= link_to "削除", post_post_comment_path(post_comment.post, post_comment), method: :delete %>
-  <% end %>
-  <% if @post.favorited_by?(current_user) %>
-    <p>
-      <%= link_to post_favorites_path(@post), method: :delete do %>
-        ❤️️<%= @post.favorites.count %> いいね
-      <% end %>
-    </p>
-    <% else %>
-    <p>
-      <%= link_to post_favorites_path(@post), method: :post do %>
-        🤍<%= @post.favorites.count %> いいね
-      <% end %>
-    </p>
   <% end %>
 <% end %>
 </div>

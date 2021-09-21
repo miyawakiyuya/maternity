@@ -1,20 +1,16 @@
-
+<li>
+<%= link_to '投稿フォーム', new_diary_path %>
+</li>
 <%= month_calendar events: @diaries do |date, diary| %>
   <%= date.day %>
-
   <% if diary.count > 0 %>
   <div>
-  <%= link_to diary_path(date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s) do %>
-    当日の日記
-    <%#= attachment_image_tag d,:image , :fill, 40, 24 %>
-    <%#=d.title%>
+  <%= link_to diary_path(date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s) do %>★
   <%end%>
   </div>
   <%end%>
 <% end %>
 
 
-<li>
-<%= link_to '投稿フォーム', new_diary_path %>
-</li>
+
 

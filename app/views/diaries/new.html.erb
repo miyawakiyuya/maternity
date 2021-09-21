@@ -1,5 +1,7 @@
 <h1>日記投稿</h1>
 <%= form_with model: @diary, local:true do |f| %>
+  <h4>投稿日</h4>
+  <%= f.date_field :start_time %>
   <h4>画像</h4>
   <%= f.attachment_field :image %>
   <h4>タイトル</h4>
