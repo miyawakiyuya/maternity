@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :weights, only: [:new, :index, :edit, :create, :update, :destroy]
+
   resources :posts do
-  resources :post_comments, only: [:create, :destroy]
+   resources :post_comments, only: [:create, :destroy]
    resource :favorites, only: [:create, :destroy]
   end
 

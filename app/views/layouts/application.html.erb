@@ -21,26 +21,26 @@
             <ul class="navbar-nav ml-auto">
     <% if user_signed_in? %>
       <li>
-        <%= link_to "MYPAGE", users_my_page_path, class: 'nav-link text-dark' %>
+        <%= link_to "MYPAGE", users_my_page_path, class: 'nav-link text-dark fas fa-user-cog' %>
       </li>
       <li>
-        <%= link_to "DIARY", diaries_path, class: 'nav-link text-dark' %>
+        <%= link_to "DIARY", diaries_path, class: 'nav-link text-dark fas fa-book' %>
       </li>
       <li>
-        <%= link_to "WEIGHT", diaries_path,class: 'nav-link text-dark' %>
+        <%= link_to "WEIGHT", weights_path,class: 'nav-link text-dark fas fa-weight' %>
       </li>
       <li>
-        <%= link_to "POST", posts_path, class: 'nav-link text-dark' %>
+        <%= link_to "POST", posts_path, class: 'nav-link text-dark fas fa-pencil-alt' %>
       </li>
       <li>
-        <%= link_to "LOGOUT", destroy_user_session_path, method: :delete,class: 'nav-link text-dark' %>
+        <%= link_to "LOGOUT", destroy_user_session_path, method: :delete,class: 'nav-link text-dark fas fa-sign-out-alt' %>
       </li>
     <% else %>
       <li>
-        <%= link_to "新規登録", new_user_registration_path %>
+        <%= link_to "新規登録", new_user_registration_path, class: 'nav-link text-dark fas fa-user-plus' %>
       </li>
       <li>
-        <%= link_to "ログイン", new_user_session_path %>
+        <%= link_to "ログイン", new_user_session_path, class: 'nav-link text-dark fas fa-sign-in-alt' %>
       </li>
     <% end %>
     </ul>
@@ -49,9 +49,7 @@
       </nav>
     </header>
     <main>
-     <div class="container mx-auto">
        <%= yield %>
-     </div>
    </main>
     <footer class="fixed-bottom bg-dark text-white pt-3 pb-2">
        <div class="container">

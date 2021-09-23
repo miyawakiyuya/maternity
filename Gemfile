@@ -76,3 +76,7 @@ gem 'kaminari','~> 1.2.1'
 gem 'simple_calendar', '~> 2.0'
 
 gem 'jquery-rails'
+
+gem "chartkick"
+
+gem 'rails-i18n', '~> 5.1'
