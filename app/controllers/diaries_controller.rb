@@ -1,15 +1,13 @@
 class DiariesController < ApplicationController
   def index
     @diaries = current_user.diarys
+    @diary = Diary.new
   end
 
   def show
     @diaries = current_user.diarys.where(start_time: params[:date].to_date.all_day)
   end
 
-  def new
-    @diary = Diary.new
-  end
 
   def create
     diary = Diary.new(diary_params)

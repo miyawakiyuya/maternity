@@ -1,18 +1,29 @@
 <%= paginate @posts %>
-<%= link_to '投稿', new_post_path,class:"btn btn-success" %>
+<%= link_to 'チャット', new_post_path,class:"btn-square-soft" %>
 <% @posts. each do |post|%>
- <div>
-  <p>タイトル<%= link_to post_path(post.id) do %>
+<table>
+
+</table>
+ <div class="body">
+  <p>ユーザーネーム：<%= post.user.name %></p>
+ </div>
+
+ <div class="title">
+  <%= link_to post_path(post.id) do %>
    <%= post.title %>
   <% end %>
-  </p>
-  <p>内容<%= post.body %></p>
-  <p>ユーザーネーム：<%= post.user.name %></p>
+ </div>
+ <div class="body">
+  <%= post.body %>
+ </div>
+ <div class="action">
   <div id="favorite_area_<%= post.id %>">
    <%= render 'favorites/favorite',post: post %>
   </div>
-  <p><%= link_to "コメント数#{post.post_comments.count} ", post_path(post.id) %></p>
+  <div class="comment">
+   <%= link_to "コメント数#{post.post_comments.count} ", post_path(post.id) %>
+  </div>
  </div>
-<% end %>
+ <% end %>
 
 

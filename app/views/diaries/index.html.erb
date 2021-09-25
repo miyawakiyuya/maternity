@@ -1,16 +1,35 @@
-<li>
-<%= link_to '投稿フォーム', new_diary_path %>
-</li>
-<%= month_calendar events: @diaries do |date, diary| %>
-  <%= date.day %>
-  <% if diary.count > 0 %>
-  <div>
-  <%= link_to diary_path(date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s) do %>★
-  <%end%>
+<h1>新規投稿</h1>
+ <br />
+<div class="inner contact">
+  <div class="contact-form">
+    <%= form_with model: @diary, local:true do |f| %>
+      <div class="row">
+        <div class="col-sm wow animated slideInLeft" data-wow-delay=".5s">
+          <%= f.date_field :start_time,class: "form" %>
+          <%= f.text_field :title, placeholder: "タイトル",class: "form" %>
+          <%= f.attachment_field :image, class: "form" %>
+        </div>
+        <div class="col-sm wow animated slideInRight" data-wow-delay=".5s">
+          <%= f.text_area :body, placeholder: "内容", class: "form textarea" %>
+        </div>
+      </div>
+      <div class="relative fullwidth col-xs-12">
+        <%= f.submit 'new diary', class: "form-btn semibold" %>
+      </div>
+    <% end %>
   </div>
-  <%end%>
-<% end %>
-
-
-
-
+</div>
+<div>
+  <%= month_calendar events: @diaries do |date, diary| %>
+    <%= date.day %>
+    <% if diary.count > 0 %>
+      <div>
+      <%= link_to diary_path(date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s) do %>✨
+        <% diary. each do |d|%>
+         <%= d.title %>
+        <% end %>
+      <% end %>
+      </div>
+    <%end%>
+  <% end %>
+</div>

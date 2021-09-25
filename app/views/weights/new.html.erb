@@ -1,8 +1,0 @@
-<h1>投稿</h1>
-<%= form_with model: @weight, local:true do |f| %>
-  <h4>投稿日</h4>
-  <%= f.date_field :date %>
-  <h4>体重</h4>
-  <%= f.number_field :weight, step: '0.1' %>
-  <%= f.submit '投稿' %>
-<% end %>
