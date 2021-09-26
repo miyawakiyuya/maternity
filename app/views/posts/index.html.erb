@@ -14,32 +14,42 @@
   <% end %>
   </div>
 
-  <div class="col-8">
+
+  <table class="table table-bordered offset-1">
+  <thead>
+    <tr class="table-danger">
+      <th width="13%">名前</th>
+      <th width="17%">タイトル</th>
+      <th width="40%">内容</th>
+      <th width="15%">いいね</th>
+      <th width="15%">コメント</th>
+    </tr>
+  </thead>
   <% @posts. each do |post|%>
-   <div class="body">
-    <p>ユーザーネーム：<%= post.user.name %></p>
-   </div>
-   <div class="title">
-    <p>タイトル:
-     <%= link_to post_path(post.id) do %>
-      <%= post.title %>
-    <% end %>
-    </p>
-   </div>
-   <div class="body">
-    <p>内容: <%= post.body %></p>
-   </div>
-
-   <div id="favorite_area_<%= post.id %>">
-    <%= render 'favorites/favorite',post: post %>
-   </div>
-   <div class="comment">
-    <%= link_to "コメント数#{post.post_comments.count} ", post_path(post.id) %>
-   </div>
- <% end %>
+  <tbody>
+    <tr>
+      <td><%= post.user.name %></td>
+      <td><%= post.title %></td>
+      <td>
+        <%= post.body %><br/>
+        <% if post.user == current_user %>
+         <%= link_to "投稿編集", edit_post_path(post) %>
+         <%= link_to "削除", post_path(post), method: :delete %>
+        <% end %>
+      </td>
+      <td id="favorite_area_<%= post.id %>">
+         <%= render 'favorites/favorite',post: post %>
+       </td>
+      <td><%= link_to "コメント#{post.post_comments.count} ", post_path(post.id) %></td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
  <%= paginate @posts %>
- </div>
 
-</div>
+
+
+
+
 
 
