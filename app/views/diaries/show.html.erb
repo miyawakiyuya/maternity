@@ -1,17 +1,21 @@
+<h4 class="head-line  title_h2 my-3">todays,diary</h4>
 <% @diaries.each do |diary| %>
-<div>
-  <p><%= attachment_image_tag diary,:image , :fill, 150, 80 %></p>
-  <p>タイトル
-     <%= diary.title %>
-  </p>
-  <p>内容<%= diary.body %></p>
-  <p>ユーザーネーム：<%= diary.user.name %></p>
-<li>
-<%= link_to "投稿編集", edit_diary_path(diary.id) %>
-</li>
-<li>
-<%= link_to "投稿削除", diary_path(diary.id), method: :delete  %>
-</li>
-
+<div class="diary">
+  <table class="table table-borderless diary">
+    <tr><%= attachment_image_tag diary,:image , :fill, 200, 120 %></tr>
+    <tr>
+      <th>タイトル</th>
+      <td><%= diary.title %></td>
+    </tr>
+    <tr>
+      <th>日記内容</th>
+      <td><%= diary.body %></td>
+    </tr>
+    <tr>
+      <th><%= link_to "投稿編集", edit_diary_path(diary.id) %></th>
+      <td><%= link_to "投稿削除", diary_path(diary.id), method: :delete %></td>
+    </tr>
+  </table>
 </div>
 <% end %>
+

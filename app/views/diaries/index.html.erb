@@ -1,24 +1,21 @@
-<h1>新規投稿</h1>
- <br />
-<div class="inner contact">
-  <div class="contact-form">
+<h4 class="hading col-3">　　new diary</h4> <br/>
+  <div>
     <%= form_with model: @diary, local:true do |f| %>
       <div class="row">
-        <div class="col-sm wow animated slideInLeft" data-wow-delay=".5s">
+        <div class="col-sm">
           <%= f.date_field :start_time,class: "form" %>
           <%= f.text_field :title, placeholder: "タイトル",class: "form" %>
           <%= f.attachment_field :image, class: "form" %>
         </div>
-        <div class="col-sm wow animated slideInRight" data-wow-delay=".5s">
+        <div class="col-sm">
           <%= f.text_area :body, placeholder: "内容", class: "form textarea" %>
         </div>
       </div>
-      <div class="relative fullwidth col-xs-12">
-        <%= f.submit 'new diary', class: "form-btn semibold" %>
+      <div class="col">
+        <%= f.submit '投稿', class: "form-btn semibold" %>
       </div>
     <% end %>
   </div>
-</div>
 <div>
   <%= month_calendar events: @diaries do |date, diary| %>
     <%= date.day %>

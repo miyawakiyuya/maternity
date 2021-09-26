@@ -1,29 +1,45 @@
-<%= paginate @posts %>
-<%= link_to 'チャット', new_post_path,class:"btn-square-soft" %>
-<% @posts. each do |post|%>
-<table>
-
-</table>
- <div class="body">
-  <p>ユーザーネーム：<%= post.user.name %></p>
- </div>
-
- <div class="title">
-  <%= link_to post_path(post.id) do %>
-   <%= post.title %>
+<div class="contact-form">
+  <div>
+  <%= form_with model: @post, local:true do |f| %>
+    <h4 class="hading">new post</h4> <br/>
+    <div>
+     <%= f.text_field :title, placeholder: "タイトル",class: "form" %>
+    </div>
+    <div>
+     <%= f.text_area :body, placeholder: "内容",class: "form" %>
+    </div>
+    <div>
+     <%= f.submit '投稿', class: "form-btn semibold" %>
+    </div>
   <% end %>
- </div>
- <div class="body">
-  <%= post.body %>
- </div>
- <div class="action">
-  <div id="favorite_area_<%= post.id %>">
-   <%= render 'favorites/favorite',post: post %>
   </div>
-  <div class="comment">
-   <%= link_to "コメント数#{post.post_comments.count} ", post_path(post.id) %>
-  </div>
- </div>
+
+  <div class="col-8">
+  <% @posts. each do |post|%>
+   <div class="body">
+    <p>ユーザーネーム：<%= post.user.name %></p>
+   </div>
+   <div class="title">
+    <p>タイトル:
+     <%= link_to post_path(post.id) do %>
+      <%= post.title %>
+    <% end %>
+    </p>
+   </div>
+   <div class="body">
+    <p>内容: <%= post.body %></p>
+   </div>
+
+   <div id="favorite_area_<%= post.id %>">
+    <%= render 'favorites/favorite',post: post %>
+   </div>
+   <div class="comment">
+    <%= link_to "コメント数#{post.post_comments.count} ", post_path(post.id) %>
+   </div>
  <% end %>
+ <%= paginate @posts %>
+ </div>
+
+</div>
 
 

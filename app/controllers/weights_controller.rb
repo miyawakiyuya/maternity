@@ -3,13 +3,9 @@ class WeightsController < ApplicationController
     @weight = Weight.new
     @weights = current_user.weights
     @chart = []
-    # @weights.each_with_index do |weight, i|
-    #   @chart[i] = [@weights[i].date.strftime("%Y年%m月%d日"), @weights[i].weight]
-    # end
     @weights.each do |weight|
       @chart.push([weight.date.strftime("%Y年%m月%d日"), weight.weight])
     end
-    # @weight = @weights.date.strftime("%Y年%m月%d日")
     # binding.pry
   end
 

@@ -1,15 +1,12 @@
 class PostsController < ApplicationController
   def index
+    @post = Post.new
     @posts = Post.page(params[:page]).reverse_order
   end
 
   def show
     @post = Post.find(params[:id])
     @post_comment = PostComment.new
-  end
-
-  def new
-    @post = Post.new
   end
 
   def edit

@@ -1,30 +1,27 @@
-
-<h1>新規投稿</h1> <br/>
-<div class="inner contact">
-  <div class="contact-form">
-    <%= form_with model: @weight, local:true do |f| %>
-      <div class="col-3 wow animated slideInLeft" data-wow-delay=".5s">
-        <%= f.date_field :date,class: "form" %>
-      </div>
-      <div class="col-3 wow animated slideInLeft" data-wow-delay=".5s">
-        <%= f.number_field :weight, placeholder: "KG", step: '0.1',class: "form" %>
-      </div>
-      <div class="relative fullwidth col-3">
-        <%= f.submit 'new weight', class: "form-btn semibold" %>
-      </div>
-
-    <% end %>
+<div class="contact-form">
+  <%= form_with model: @weight, local:true do |f| %>
+  <h4 class="hading">new weight</h4><br/>
+  <div>
+    <%= f.date_field :date,class: "form" %>
+  </div>
+  <div>
+    <%= f.number_field :weight, placeholder: "KG", step: '0.1',class: "form" %>
+  </div>
+  <div>
+    <%= f.submit '投稿', class: "form-btn semibold" %>
+  </div>
+  <% end %>
+  <div>
+  <%= line_chart @chart ,width: "800px", height: "350px", min: 40, max: 100, colors: ["#b00", "#666"], xtitle: "DAY", ytitle: "WEIGH", decimal: "," %>
   </div>
 </div>
-<div class="col-8 wow animated slideInRight" data-wow-delay=".5s">
-        <%= line_chart @chart ,width: "800px", height: "350px", min: 40, max: 100, colors: ["#b00", "#666"], xtitle: "DAY", ytitle: "WEIGH", decimal: "," %>
-      </div>
 
-<% @weights. each do |weight|%>
-<%= weight.date.strftime("%Y年%m月%d日")%>
-<p>日付<%= weight.date.strftime('%Y%m/%d') %></p>
-<p>体重<%= weight.weight %></p>
-<p>ユーザーネーム：<%= weight.user.name %></p>
-<%= link_to "投稿編集", edit_weight_path(weight) %>
-<%= link_to "投稿削除", weight_path(weight), method: :delete  %>
-<% end %>
+<div class="weight">
+  <% @weights. each do |weight|%>
+    <p>日付<%= weight.date.strftime('%Y%m/%d') %></p>
+    <p>体重<%= weight.weight %></p>
+    <p>ユーザーネーム：<%= weight.user.name %></p>
+    <%= link_to "投稿編集", edit_weight_path(weight) %>
+    <%= link_to "投稿削除", weight_path(weight), method: :delete  %>
+  <% end %>
+</div>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :weights, only: [:new, :index, :edit, :create, :update, :destroy]
+  resources :weights, only: [:index, :edit, :create, :update, :destroy]
 
   resources :posts do
    resources :post_comments, only: [:create, :destroy]
