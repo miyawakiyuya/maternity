@@ -109,16 +109,56 @@ h4.hading {
 
 .bg_test {
   text-align:  center;
-  padding:  80px;
+  padding:  60px;
+  background: rgba(255,255,255,0.4);
+  height: 100%;
 }
 
 footer{
   background-image: url(baby-784608_1920.jpg);
-  opacity: 0.4;
   background-position: center;
+  background-size: cover;
 }
 
 .text {
   color: #660000;
   text-align: center;
+}
+
+.form-wrapper {
+  background-image: url(mak-RlxP6WGmfP0-unsplash);
+  background-size: cover;
+  margin: 3em auto;
+  padding: 0 1em;
+  max-width: 500px;
+}
+
+
+h2 {
+  text-align: center;
+  padding: 1em 0;
+  font-weight: 900;
+}
+
+td{
+  font-weight: 900;
+}
+
+form {
+  padding: 0 1.5em;
+}
+
+.form-item {
+  margin-bottom: 0.75em;
+  width: 100%;
+
+}
+
+.button-panel {
+  padding: 2em 0;
+}
+
+
+input:-webkit-autofill {
+ transition: background-color 5000s ease-in-out 0s !important;
 }

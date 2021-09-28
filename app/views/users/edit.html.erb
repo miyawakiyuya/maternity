@@ -1,25 +1,24 @@
-<div class="row">
-	<div class="col-xs-offset-1 col-xs-8">
-		<h3 class="head-line text-center title_h2 my-3">会員情報編集</h3>
-		<%= form_with model: @user, url: users_path, local:true do |f| %>
-		<table class="offset-4 table">
-	  <tbody>
-     <tr>
-      <td class="info col-xs-2">氏名</td>
-      <td><%= f.text_field :name %></td>
-     </tr>
-     <tr>
-      <td class="info col-xs-2">メールアドレス</td>
-      <td><%= f.email_field :email %></td>
-     </tr>
-     <tr>
-      <td class="info col-xs-2"></td>
+<div class="form-wrapper">
+  <form>
+	<h2>会員情報編集</h2>
+	<%= form_with model: @user, url: users_path, local:true do |f| %>
+	 <table width="500" height="400" style="font-size : 20px;" >
+    <tr>
+      <td width="30%">氏名</td>
+      <td width="40%"><%= f.text_field :name,class:"form" %></td>
+      <td width="30%"></td>
+    </tr>
+    <tr>
+      <td>メールアドレス</td>
+      <td><%= f.email_field :email,class:"form" %></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
       <td> <%= f.submit '編集内容を保存',class:"btn btn-success" %></td>
       <td> <%= link_to " 退会する", users_quit_path, class: "btn btn-danger" %></td>
-     </tr>
-    </tbody>
-    </table>
-     <% end %>
-
-  </div>
+    </tr>
+   </table>
+  <% end %>
+  </form>
 </div>

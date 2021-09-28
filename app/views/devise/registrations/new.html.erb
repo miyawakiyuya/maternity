@@ -1,33 +1,41 @@
-<h2>新規登録</h2>
-
-<%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+<div class="form-wrapper">
+  <h2>新規登録</h2>
+  <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  <form>
+    <div class="form-item">
+      <%= f.label :email,"メールアドレス" %><br/>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form" %>
+    </div>
+    <div class="form-item">
+      <%= f.label :name,"ニックネーム" %><br />
+      <%= f.text_field :name, autofocus: true,class:"form" %>
+    </div>
+    <div class="form-item">
+       <%= f.label :password,"パスワード" %><br/>
+       <% if @minimum_password_length %>
+       <em>(<%= @minimum_password_length %> 文字以上)</em>
+       <% end %><br />
+       <%= f.password_field :password, autocomplete: "new-password",class:"form" %>
+    </div>
+    <div class="form-item">
+      <%= f.label :password_confirmation,"パスワード（確認用）" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form" %>
+    </div>
+    <div class="button-panel">
+      <%= f.submit "新規登録",class:"form-btn" %>
+    </div>
+  </form>
+  <% end %>
+</div>
 
-  <div class="field">
-    <%= f.label :email,"メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
 
-  <div class="field">
-    <%= f.label :name,"ユーザーネーム" %><br />
-    <%= f.text_field :name, autofocus: true %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password,"パスワード" %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> 文字以上)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation,"パスワード（確認用）" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "新規登録" %>
-  </div>
-<% end %>
+
+
+
+
+

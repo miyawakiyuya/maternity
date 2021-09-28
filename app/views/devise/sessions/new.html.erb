@@ -1,20 +1,18 @@
-<h2>ログイン</h2>
-
-<%= form_with model: @user, url: user_session_path, local: true do |f| %>
-  <div class="field">
-    <%= f.label :email,"メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password,"パスワード" %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "ログイン" %>
-  </div>
-<% end %>
-
-rails g model Diary user_id:integer image_id:string title:string body:text
-rails g controller Diaries index show edit
+<div class="form-wrapper">
+  <h2>ログイン</h2>
+  <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+  <form>
+    <h5 class="form-item">
+      <%= f.label :email,"メールアドレス" %><br/>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form" %>
+    </h5>
+    <h5 class="form-item">
+       <%= f.label :password,"パスワード" %><br/>
+       <%= f.password_field :password, autocomplete: "current-password",class:"form" %>
+    </h5>
+    <div class="button-panel">
+      <%= f.submit "ログイン",class:"form-btn" %>
+    </div>
+  </form>
+  <% end %>
+</div>
