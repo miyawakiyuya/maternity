@@ -1,8 +1,8 @@
-<h4 class="a">todays,diary</h4>
+<h4 class="hading col-3">todays,diary</h4> <br/>
 
  <table class="table table-bordered">
   <thead>
-    <tr class="table-danger">
+    <tr class="table-warning">
       <th width="25%">画像</th>
       <th width="20%">タイトル</th>
       <th width="35%">内容</th>
@@ -15,8 +15,8 @@
       <td><%= attachment_image_tag diary,:image , :fill, 278, 145 %></td>
       <td><%= diary.title %></td>
       <td><%= diary.body %></td>
-      <th><%= link_to "投稿編集", edit_diary_path(diary.id) %><br/>
-          <%= link_to "投稿削除", diary_path(diary.id), method: :delete %>
+      <th><%= link_to "投稿編集", edit_diary_path(diary.id),class:"fas fa-edit" %><br/>
+          <%= link_to "投稿削除", diary_path(diary.id), method: :delete, class: 'fas fa-trash-alt' %>
       </td>
     </tr>
   </tbody>

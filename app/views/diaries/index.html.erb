@@ -1,32 +1,25 @@
-<h4 class="hading col-3">　　new diary</h4> <br/>
-  <div>
-    <%= form_with model: @diary, local:true do |f| %>
-      <div class="row">
-        <div class="col-sm">
-          <%= f.date_field :start_time,class: "form" %>
-          <%= f.text_field :title, placeholder: "タイトル",class: "form" %>
-          <%= f.attachment_field :image, class: "form" %>
-        </div>
-        <div class="col-sm">
-          <%= f.text_area :body, placeholder: "内容", class: "form textarea" %>
-        </div>
-      </div>
-      <div class="col">
-        <%= f.submit '投稿', class: "form-btn semibold" %>
-      </div>
-    <% end %>
-  </div>
-<div>
-  <%= month_calendar events: @diaries do |date, diary| %>
-    <%= date.day %>
-    <% if diary.count > 0 %>
-      <div>
-      <%= link_to diary_path(date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s) do %>✨
-        <% diary. each do |d|%>
-         <%= d.title %>
-        <% end %>
+<div class="contact-form">
+  <div class="col-3">
+<%= form_with model: @diary, local:true do |f| %>
+ <h4 class="hading">new diary</h4> <br/>
+  <%= f.date_field :start_time,class: "diaryform" %>
+  <%= f.text_field :title, placeholder: "タイトル",class: "diaryform" %>
+  <%= f.attachment_field :image, class: "diaryform" %>
+  <%= f.text_area :body, placeholder: "内容", class: "diaryform textarea" %>
+  <%= f.submit '投稿', class: "diaryform-btn semibold" %>
+<% end %>
+</div>
+<div class="col-9">
+<%= month_calendar events: @diaries do |date, diary| %>
+  <%= date.day %>
+  <% if diary.count > 0 %>
+    <%= link_to diary_path(date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s) do %>✨
+      <% diary. each do |d|%>
+       <%= d.title %>
       <% end %>
-      </div>
-    <%end%>
-  <% end %>
+    <% end %>
+
+  <%end%>
+<% end %>
+</div>
 </div>
