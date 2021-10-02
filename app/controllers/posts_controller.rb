@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+  before_action :set_q, only: [:index, :search]
+
   def index
     @post = Post.new
     @posts = Post.page(params[:page]).reverse_order
@@ -33,7 +36,16 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
+  def search
+    @results = @q.result
+  end
+
   private
+
+  def set_q
+    @q = Post.ransack(params[:q])
+  end
+
 
   def post_params
     params.require(:post).permit(:user_id,:title, :body)

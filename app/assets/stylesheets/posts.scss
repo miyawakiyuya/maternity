@@ -1,3 +1,24 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.postform-btn{
+  width:180px;
+  display: block;
+  height: auto;
+  padding:15px;
+  color:#fff;
+  background:#FF82B2;
+  border:none;
+}
+
+.postform{
+  width: 100%;
+  padding: 15px;
+  background:#FFA6B3;
+  border:1px solid rgba(0, 0, 0, 0.075);
+  margin-bottom:25px;
+  font-size:13px;
+}
+.block{
+  display: block;
+}
+h5{
+  padding: 0 2.5em;
+}

@@ -3,7 +3,7 @@ class CreateWeights < ActiveRecord::Migration[5.2]
     create_table :weights do |t|
       t.integer :user_id
       t.float :weight
-      t.datetime :date
+      t.string :date
 
       t.timestamps
     end

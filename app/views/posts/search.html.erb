@@ -1,28 +1,5 @@
-<div class="contact-form">
-  <div>
-  <%= form_with model: @post, local:true do |f| %>
-    <h4 class="hading">new post</h4> <br/>
-    <div>
-     <%= f.text_field :title, placeholder: "タイトル",class: "postform" %>
-    </div>
-    <div>
-     <%= f.text_area :body, placeholder: "内容",class: "postform" %>
-    </div>
-    <div>
-     <%= f.submit '投稿', class: "postform-btn" %>
-    </div>
-  <% end %>
-  </div>
-
-<div class="block">
-  <h5>タイトル検索</h5>
-  <%= search_form_for @q, url: search_posts_path do |f| %>
-  <%= f.search_field :title_cont %>
-  <%= f.submit '検索' %>
-  <% end %>
-
-  <table width="800">
-  <thead class="table table-bordered">
+<table class="table table-bordered">
+  <thead>
     <tr class="table-danger">
       <th>投稿日</th>
       <th width="13%">名前</th>
@@ -32,8 +9,8 @@
       <th width="15%">コメント</th>
     </tr>
   </thead>
-  <% @posts. each do |post|%>
-  <tbody class="table table-bordered">
+<% @results.each do |post| %>
+     <tbody>
     <tr>
       <td><%= post.user.created_at.strftime('%Y/%m/%d') %> </td>
       <td><%= post.user.name %></td>
@@ -51,16 +28,7 @@
       <td><%= link_to "コメント#{post.post_comments.count} ", post_path(post.id) %></td>
     </tr>
   </tbody>
-  <% end %>
-  <%= paginate @posts %>
+<% end %>
 </table>
-</div>
 
-
-
-
-
-
-
-
-
+<%= link_to '戻る', posts_path %>

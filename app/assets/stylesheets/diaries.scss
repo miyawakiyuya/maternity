@@ -1,3 +1,46 @@
-// Place all the styles related to the Diaries controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.diaryform {
+  width: 100%;
+  padding: 11px;
+  background:#FFFFAA;
+  border:1px solid rgba(0, 0, 0, 0.075);
+  margin-bottom:15px;
+  font-size:13px;
+}
+
+.diaryform-btn{
+  width:200px;
+  padding:15px;
+  background:#FFFF11;
+  border:none;
+  font-weight: bold;
+}
+
+.textarea{
+  height: 110px;
+  max-height: 200px;
+  max-width: 100%;
+ }
+
+.card {
+  margin: 30px;
+  width: 350px;
+  box-shadow: 0 2px 5px #ccc;
+}
+.card-img {
+  border-radius: 5px 5px 0 0;
+  max-width: 100%;
+  height: auto;
+}
+.card-content {
+  padding: 20px;
+}
+.card-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.card-link {
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding: 20px;
+}

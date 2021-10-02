@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :posts do
    resources :post_comments, only: [:create, :destroy]
    resource :favorites, only: [:create, :destroy]
+   collection do
+      get 'search'
+    end
   end
 
   resource :users, only: [:edit,:update]

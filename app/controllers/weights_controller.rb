@@ -1,13 +1,15 @@
 class WeightsController < ApplicationController
+
+  before_action :date_check, only: :create
+
   def index
     @weight = Weight.new
     @weights = current_user.weights.page(params[:page]).per(7).order(date: "desc")
     @chart = []
     @weights.each do |weight|
-      @chart.push([weight.date.strftime("%d日"), weight.weight])
+      @chart.push([weight.date.to_datetime.strftime('%d日'), weight.weight])
     end
     @chart = @chart.reverse
-    # binding.pry
   end
 
   def edit
@@ -37,5 +39,10 @@ class WeightsController < ApplicationController
 
   def weight_params
     params.require(:weight).permit(:user_id, :weight, :date)
+  end
+
+  def date_check
+    duplication_date = current_user.weights.where(date: params[:weight][:date])
+    duplication_date.delete_all if duplication_date.present?
   end
 end

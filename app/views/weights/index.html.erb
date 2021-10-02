@@ -29,7 +29,7 @@
   <% @weights. each do |weight|%>
   <tbody>
     <tr>
-      <td><%= weight.date.strftime("%Y年%m月%d日") %></td>
+      <td><%= weight.date %></td>
       <td><%= weight.weight %>kg</td>
       <td>
         <% if weight.user == current_user %>

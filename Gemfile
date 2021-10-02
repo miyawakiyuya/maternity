@@ -80,3 +80,5 @@ gem 'jquery-rails'
 gem "chartkick"
 
 gem 'rails-i18n', '~> 5.1'
+
+gem 'ransack'
