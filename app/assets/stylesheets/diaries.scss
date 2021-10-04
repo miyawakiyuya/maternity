@@ -8,7 +8,7 @@
 }
 
 .diaryform-btn{
-  width:200px;
+  width: 100%;
   padding:15px;
   background:#FFFF11;
   border:none;
@@ -43,4 +43,27 @@
   text-align: center;
   border-top: 1px solid #eee;
   padding: 20px;
+}
+
+.form-wra {
+  margin: 0 190px;
+  padding: 0 1em;
+  max-width: 500px;
+  text-align: center;
+}
+
+.diary-editform {
+  width: 60%;
+  padding: 11px;
+  background:#FFFFAA;
+  border:1px solid rgba(0, 0, 0, 0.075);
+  margin-bottom:15px;
+}
+
+.shad{
+  font-size: 19px;
+  font-weight:bold;
+}
+.search{
+  text-align: center;
 }

@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    @posts = Post.page(params[:page]).reverse_order
+    @posts = Post.page(params[:page]).page(params[:page]).per(7).reverse_order
   end
 
   def show

@@ -1,8 +1,23 @@
-<h4 class=" my-4"><spna>体重変更</span></h4>
-		<%= form_with model: @weight, local:true do |f| %>
-	   <h4>投稿日</h4>
-     <%= f.date_field :date %>
-     <h4>体重</h4>
-     <%= f.number_field :weight, step: '0.1' %>
-     <%= f.submit '編集' %>
-    <% end %>
+<div class="form-wra">
+<h4 class="edit-title">体重編集</h4> <br/>
+</div>
+<div class="offset-2">
+  <%= form_with model: @weight, local:true do |f| %>
+  <table width="700" height="400">
+  <tbody>
+    <tr>
+    <td class="shad">投稿日</td>
+    <td><%= f.date_field :date,class: "weight-editform" %></td>
+   </tr>
+   <tr>
+    <td class="shad">体重</td>
+    <td><%= f.number_field :weight, step: '0.1',class: "weight-editform" %></td>
+   </tr>
+   <tr>
+    <td width="17%"></td>
+    <td width="70%"> <%= f.submit '変更を保存', class: "weightform-btn semibold" %></td>
+   </tr>
+  </tbody>
+  </table>
+   <% end %>
+</div>

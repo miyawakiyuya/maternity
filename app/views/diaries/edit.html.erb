@@ -1,28 +1,27 @@
-<div class="row">
-	<div class="col-xs-offset-1 col-xs-8">
-		<h4 class=" my-4"><spna>投稿編集</span></h4>
-		<%= form_with model: @diary, local:true do |f| %>
-		<table width="700" height="400">
-	  <tbody>
-	    <tr>
-      <td class="info col-xs-2">投稿画像</td>
-      <td><%= f.attachment_field :image %></td>
-     </tr>
-     <tr>
-      <td class="info col-xs-2">タイトル</td>
-      <td><%= f.text_field :title %></td>
-     </tr>
-     <tr>
-      <td class="info col-xs-2">内容</td>
-      <td><%= f.text_area :body %></td>
-     </tr>
-     <tr>
-      <td class="info col-xs-2"></td>
-      <td> <%= f.submit '変更を保存',class:"btn btn-success" %></td>
-     </tr>
-    </tbody>
-    </table>
-     <% end %>
-
-  </div>
+<div class="form-wra">
+<h4 class="hading">日記編集</h4> <br/>
+</div>
+<div class="offset-2">
+  <%= form_with model: @diary, local:true do |f| %>
+  <table width="700" height="400">
+  <tbody>
+    <tr>
+    <td class="shad">投稿画像</td>
+    <td><%= f.attachment_field :image,class: "diarye-editform" %></td>
+   </tr>
+   <tr>
+    <td class="shad">タイトル</td>
+    <td><%= f.text_field :title,class: "diary-editform" %></td>
+   </tr>
+   <tr>
+    <td class="shad">内容</td>
+    <td><%= f.text_area :body,class: "diary-editform" %></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td class="example2"><%= f.submit '変更を保存', class: "diaryform-btn semibold" %></td>
+   </tr>
+  </tbody>
+  </table>
+   <% end %>
 </div>

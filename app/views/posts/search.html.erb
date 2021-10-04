@@ -12,7 +12,7 @@
 <% @results.each do |post| %>
      <tbody>
     <tr>
-      <td><%= post.user.created_at.strftime('%Y/%m/%d') %> </td>
+      <td><%= post.user.updated_at.strftime('%Y/%m/%d') %> </td>
       <td><%= post.user.name %></td>
       <td><%= post.title %></td>
       <td>

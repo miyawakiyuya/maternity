@@ -13,7 +13,7 @@
 <%= month_calendar events: @diaries do |date, diary| %>
   <%= date.day %>
   <% if diary.count > 0 %>
-    <%= link_to diary_path(date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s) do %>✨
+    <%= link_to diary_path(date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s) do %>
       <% diary. each do |d|%>
        <%= d.title %>
       <% end %>
