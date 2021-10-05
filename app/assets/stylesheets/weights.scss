@@ -7,8 +7,16 @@
   font-size:13px;
 }
 
+.edit-weightform-btn{
+  width: 30%;
+  padding:15px;
+  color:#fff;
+  background:#75A9FF;
+  border:none;
+}
+
 .weightform-btn{
-  width:180px;
+  width: 100%;
   padding:15px;
   color:#fff;
   background:#75A9FF;
@@ -16,7 +24,7 @@
 }
 
 .weight-editform{
-  width: 80%;
+  width: 100%;
   padding: 15px;
   background:#82D6F6;
   border:1px solid rgba(0, 0, 0, 0.075);

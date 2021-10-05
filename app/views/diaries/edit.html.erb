@@ -1,27 +1,11 @@
-<div class="form-wra">
-<h4 class="hading">日記編集</h4> <br/>
+<h2 class="hading offset-3">日記編集</h4>
+<%= form_with model: @diary, local:true do |f| %>
+<form action="">
+  <div class="diary-editform">
+  <p class="left"><%= f.attachment_field :image,class: "diaryeform" %></p>
+  <%= f.text_field :title,class: "diaryform" %>
+  <%= f.text_area :body,class: "diaryform" %>
+  <%= f.submit '変更を保存', class: "edit-diaryform-btn" %>
 </div>
-<div class="offset-2">
-  <%= form_with model: @diary, local:true do |f| %>
-  <table width="700" height="400">
-  <tbody>
-    <tr>
-    <td class="shad">投稿画像</td>
-    <td><%= f.attachment_field :image,class: "diarye-editform" %></td>
-   </tr>
-   <tr>
-    <td class="shad">タイトル</td>
-    <td><%= f.text_field :title,class: "diary-editform" %></td>
-   </tr>
-   <tr>
-    <td class="shad">内容</td>
-    <td><%= f.text_area :body,class: "diary-editform" %></td>
-   </tr>
-   <tr>
-    <td></td>
-    <td class="example2"><%= f.submit '変更を保存', class: "diaryform-btn semibold" %></td>
-   </tr>
-  </tbody>
-  </table>
-   <% end %>
-</div>
+</form>
+<% end %>

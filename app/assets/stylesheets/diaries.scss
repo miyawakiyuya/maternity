@@ -7,6 +7,14 @@
   font-size:13px;
 }
 
+.edit-diaryform-btn{
+  width: 30%;
+  padding:15px;
+  background:#FFFF11;
+  border:none;
+  font-weight: bold;
+}
+
 .diaryform-btn{
   width: 100%;
   padding:15px;
@@ -14,7 +22,6 @@
   border:none;
   font-weight: bold;
 }
-
 .textarea{
   height: 110px;
   max-height: 200px;
@@ -52,18 +59,20 @@
   text-align: center;
 }
 
-.diary-editform {
-  width: 60%;
-  padding: 11px;
-  background:#FFFFAA;
-  border:1px solid rgba(0, 0, 0, 0.075);
-  margin-bottom:15px;
-}
-
 .shad{
   font-size: 19px;
   font-weight:bold;
 }
 .search{
   text-align: center;
+}
+
+.diary-editform {
+  width: 50%;
+  margin: 5% auto;
+  min-width: 9rem;
+  text-align: center;
+}
+.left{
+  text-align: left;
 }

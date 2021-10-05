@@ -1,17 +1,10 @@
-<div class="form-wra">
-  <h2>投稿編集</h2>
-  <%= form_with model: @post, local:true do |f| %>
-  <form>
-    <h5 class="form-item">
-      <p>タイトル</p>
-      <%= f.text_field :title,class: "postform" %>
-    </h5>
-    <h5 class="form-item">
-       <%= f.text_area :body,class: "postform" %>
-    </h5>
-    <div class="button-panel">
-      <%= f.submit "ログイン",class:"form-btn" %>
-    </div>
-  </form>
-  <% end %>
-</div>
+<h2 class="hading offset-3">投稿編集</h4>
+<%= form_with model: @post, local:true do |f| %>
+<form action="">
+  <p class="editform">
+  <%= f.text_field :title,class: "postform" %>
+  <%= f.text_area :body,class: "postform" %>
+  <%= f.submit "変更",class:"form-btn" %>
+</p>
+</form>
+<% end %>
