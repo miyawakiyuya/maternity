@@ -1,3 +1,37 @@
-// Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-image {
+  background: url(mediamodifier-fdPlZXc-ZwU-unsplash.jpg) no-repeat;
+  padding-top: 61.93333333%;
+  background-size: cover;
+}
+.top-image img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45.8%;
+}
+
+.top-image h1 {
+  position: fixed;
+  top: 10rem;
+  right: 11rem;
+  font-size: 12vw;
+  line-height: .8;
+  margin-top: 0;
+  text-align: center;
+}
+.top-image h1 span {
+  display: block;
+  font-size: 8.75vw;
+}
+.top-main {
+  background: #fff;
+  position: relative;
+  border: 1px solid #fff;
+  font-size: 1.4rem;
+  padding: 2rem 25%;
+  line-height: 1.6;
+}
+@media all and (max-width: 400px) {
+  main { padding: 2rem; }
+}
