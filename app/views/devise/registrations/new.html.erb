@@ -12,6 +12,10 @@
       <%= f.text_field :name, autofocus: true,class:"form" %>
     </div>
     <div class="form-item">
+      <%= f.label :date,"出産予定日" %><br />
+      <%= f.date_field :date, autofocus: true,class:"form" %>
+    </div>
+    <div class="form-item">
        <%= f.label :password,"パスワード" %><br/>
        <% if @minimum_password_length %>
        <em>(<%= @minimum_password_length %> 文字以上)</em>

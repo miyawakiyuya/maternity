@@ -13,6 +13,11 @@
       <td></td>
     </tr>
     <tr>
+      <td>出産予定日</td>
+      <td><%= f.date_field :date,class:"form" %></td>
+      <td></td>
+    </tr>
+    <tr>
       <td></td>
       <td> <%= f.submit '編集内容を保存',class:"btn btn-success" %></td>
       <td> <%= link_to " 退会する", users_quit_path, class: "btn btn-danger" %></td>

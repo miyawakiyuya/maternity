@@ -14,7 +14,6 @@ class DiariesController < ApplicationController
     diary.user_id = current_user.id
     diary.save
     redirect_to diaries_path
-
   end
 
   def show

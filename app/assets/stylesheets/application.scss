@@ -77,6 +77,25 @@ h4.hading {
   text-align: center;
 }
 
+.mypage-wrapper {
+  background-image: url(mediamodifier-fdPlZXc-ZwU-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 0 1em;
+  max-width: 500px;
+  text-align: center;
+}
+
+.maternity-week {
+  background-image: url(henley-design-studio-3qehZLBDsEQ-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 0 1em;
+  max-width: 500px;
+  text-align: center;
+}
+
+
 
 h2 {
   text-align: center;
@@ -142,8 +161,11 @@ h2.hading {
 
 
 @media only screen and (max-width:991px){
+.mypage-wrapper{
+  margin-bottom: 20px;
+}
 .post-img {
-    height: 200px;
+  height: 200px;
  }
 .contact-form{
   display: block;
@@ -151,10 +173,10 @@ h2.hading {
  .row {
   // display: block;
 }
-.col-10, .col-9, .col-6, .col-3 {
+.col-10, .col-9, .col-6, .col-3, .col-5{
     max-width: 100%;
  }
-.offset-3, .offset-1 {
+.offset-3, .offset-1, .offset-4, .offset-2 {
     margin-left: 0%;
  }
 .card {
@@ -225,6 +247,27 @@ form {
   object-fit: cover;
 }
 
-.table-scroll{
-  overflow-x : auto
+.post-content{
+  padding-right: 0px;
+  padding-left: 0px;
+
+}
+.card-right{
+  text-align: right;
+}
+.card-header{
+  background-color: #FFABCE;
+}
+.week_left{
+  text-align: right;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.maternity-margin{
+  margin-bottom: 30px;
+}
+.font-special{
+  transform: rotate(10deg);
+  display: inline-block;
+  color: #00FF00;
 }
