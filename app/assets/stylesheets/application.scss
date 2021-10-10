@@ -57,6 +57,7 @@ h4.hading {
   color:#fff;
   border:none;
   font-weight: bold;
+  text-align: center;
 }
 
 .contact-form{
@@ -126,25 +127,104 @@ h2.hading {
   border-top: 3px dotted #000;
   border-bottom: 3px dotted #000;
   text-align:center;
-  width: 50%;
 }
 
-@media screen and (max-width: 425px) {
-  header {
-    width: 100%;
-  }
-  .container {
-    width: 100%;
-  }
+.center-btn{
+  text-align: center;
 }
 
-@media only screen and (max-width:480px){
-table {
-margin: 10px 5px;
+.form-item{
+    margin: 0;
+    font-family: serif;
+    font-size: inherit;
+    line-height: inherit;
 }
-table th, table td {
-width: 90%;
-display: block;
-border-top: 1px solid #666;
+
+
+@media only screen and (max-width:991px){
+.post-img {
+    height: 200px;
+ }
+.contact-form{
+  display: block;
+ }
+ .row {
+  // display: block;
 }
+.col-10, .col-9, .col-6, .col-3 {
+    max-width: 100%;
+ }
+.offset-3, .offset-1 {
+    margin-left: 0%;
+ }
+.card {
+    margin: 30px 0;
+ }
+h1, .h1 {
+    font-size: 2rem;
+ }
+form {
+    padding: 0 1.5em;
+    margin: 30px;
+ }
+.diary-image, .weight-image, .post-image {
+    background: url(mediamodifier-fdPlZXc-ZwU-unsplash.jpg) no-repeat;
+    padding-top: 61.93333333%;
+    background-size: cover;
+    height: 300px;
+ }
+.container {
+ padding-left: 0px;
+ }
+}
+
+.weight-image{
+  background-image: url(2021-10-09_16.43.32.png);
+  background-position: center;
+  background-size: cover;
+}
+.diary-image{
+  background-image: url(2021-10-09_16.43.23.png);
+  background-position: center;
+  background-size: cover;
+}
+.post-image{
+  background-image: url(2021-10-09_16.43.37.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.diary-title{
+  padding: 1rem 2rem;
+  background: #FFFF55;
+  background-image: radial-gradient(#FFFFBB 13%, transparent 13%), radial-gradient(#FFFFBB 13%, transparent 13%);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+}
+.weight-title{
+  padding: 1rem 2rem;
+  background: #5D99FF;
+  background-image: radial-gradient(#A4C6FF 13%, transparent 13%), radial-gradient(#A4C6FF 13%, transparent 13%);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+}
+.post-title{
+  padding: 1rem 2rem;
+  background: #FF69A3;
+  background-image: radial-gradient(#FFABCE 13%, transparent 13%), radial-gradient(#FFABCE 13%, transparent 13%);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+}
+.top-title{
+  padding: 1em 0;
+}
+
+.post-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.table-scroll{
+  overflow-x : auto
 }

@@ -1,5 +1,5 @@
 <div class="contact-form">
-  <div class="col-3">
+  <div>
 <%= form_with model: @diary, local:true do |f| %>
  <h4 class="hading">new diary</h4> <br/>
   <%= f.date_field :start_time,class: "diaryform" %>
@@ -15,7 +15,7 @@
   <% if diary.count > 0 %>
     <%= link_to diary_path(date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s) do %>
       <% diary. each do |d|%>
-       <%= d.title %>
+       <%= d.title %><br/>
       <% end %>
     <% end %>
 

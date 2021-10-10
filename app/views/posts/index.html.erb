@@ -1,5 +1,5 @@
 <div class="contact-form">
-  <div>
+  <div class="col-3">
   <%= form_with model: @post, local:true do |f| %>
     <h4 class="hading">new post</h4> <br/>
     <div>
@@ -8,13 +8,13 @@
     <div>
      <%= f.text_area :body, placeholder: "内容",class: "postform" %>
     </div>
-    <div>
+    <div class="center-btn">
      <%= f.submit '投稿', class: "postform-btn" %>
     </div>
   <% end %>
   </div>
 
-<div class="block">
+<div class="col-9">
   <div class="search">
   <%= search_form_for @q, url: search_posts_path do |f| %>
   <%= f.search_field :title_cont, placeholder: "タイトル検索" %>
@@ -23,8 +23,9 @@
   <% end %>
   <% end %>
   </div>
+  <div class="offset-2"><%= paginate @posts %></div>
 
-  <table width="800">
+  <table class="offset-1">
   <thead class="table table-bordered">
     <tr class="table-danger">
       <th>投稿日</th>
@@ -55,7 +56,6 @@
     </tr>
   </tbody>
   <% end %>
-  <%= paginate @posts %>
 </table>
 </div>
 

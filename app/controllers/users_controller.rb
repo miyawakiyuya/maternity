@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def show
    @user = current_user
   end
@@ -8,9 +9,10 @@ class UsersController < ApplicationController
   end
 
   def update
+  # binding.pry
    @user = current_user
    @user.update(user_params)
-   redirect_to users_my_page_path
+   redirect_to users_my_page_path(current_user)
   end
 
   def quit

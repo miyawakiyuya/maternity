@@ -1,33 +1,31 @@
 <div class="form-wrapper">
-	<form>
   <h2><span><%= @user.name %>さんの詳細ページ</span></h2>
-  <table width="500" height="350" style="font-size : 20px;" >
-     	<tr>
-				<td width="30%">会員ID</td>
-        <td width="70%"><%= @user.id %></td>
-			</tr>
-			<tr>
-				<td>名前</td>
-        <td><%= @user.name %></td>
-			</tr>
-			<tr>
-				<td>メールアドレス</td>
-        <td><%= @user.email %> </td>
-			</tr>
-			<tr>
-				<td>会員ステータス</td>
-        <td>
-        	<% if @user.is_valid %>
-			     <p class="text-success">有効</p>
-			    <% else %>
-			     <p class="text-danger">退会</p>
-			    <% end %>
-        </td>
-			</tr>
-			<tr>
-        <td></td>
-        <td><%= link_to "編集する", edit_users_path, class: "btn btn-success" %>
-     </tr>
+  <table height="350" style="font-size : 20px;" >
+   	<tr>
+	    <td width="30%">会員ID</td>
+      <td width="70%"><%= @user.id %></td>
+	  </tr>
+		<tr>
+			<td>名前</td>
+	    <td><%= @user.name %></td>
+		</tr>
+		<tr>
+		  <td>メールアドレス</td>
+      <td><%= @user.email %> </td>
+		</tr>
+		<tr>
+		  <td>会員ステータス</td>
+      <td>
+    	<% if @user.is_valid %>
+	     <p class="text-success">有効</p>
+	    <% else %>
+	     <p class="text-danger">退会</p>
+		  <% end %>
+      </td>
+		</tr>
+		<tr>
+      <td></td>
+      <td><%= link_to "編集する", edit_users_path, class: "btn btn-success" %>
+    </tr>
   </table>
-  </form>
-  </div>
+</div>

@@ -1,8 +1,7 @@
 <div class="form-wrapper">
-  <form>
 	<h2>会員情報編集</h2>
 	<%= form_with model: @user, url: users_path, local:true do |f| %>
-	 <table width="500" height="400" style="font-size : 20px;" >
+	 <table height="400" style="font-size : 20px;" >
     <tr>
       <td width="30%">氏名</td>
       <td width="40%"><%= f.text_field :name,class:"form" %></td>
@@ -20,5 +19,4 @@
     </tr>
    </table>
   <% end %>
-  </form>
 </div>
