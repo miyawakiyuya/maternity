@@ -31,7 +31,7 @@
   font-style: normal;
 }
 
-body{
+body {
  font-family: 'azuki';
 }
 
@@ -42,7 +42,7 @@ h4.hading {
   text-align:center;
 }
 
-.form{
+.form {
   width: 100%;
   padding: 15px;
   margin-bottom:25px;
@@ -50,7 +50,7 @@ h4.hading {
   max-width: 300px;
 }
 
-.form-btn{
+.form-btn {
   width:200px;
   padding:15px;
   background:#66CC99;
@@ -60,7 +60,7 @@ h4.hading {
   text-align: center;
 }
 
-.contact-form{
+.contact-form {
   display: flex;
   margin: 0 auto;
 }
@@ -95,8 +95,6 @@ h4.hading {
   text-align: center;
 }
 
-
-
 h2 {
   text-align: center;
   padding: 1em 0;
@@ -110,18 +108,15 @@ form {
 .form-item {
   margin-bottom: 0.75em;
   width: 100%;
-
 }
 
 .button-panel {
   padding: 2em 0;
 }
 
-
 input:-webkit-autofill {
  transition: background-color 5000s ease-in-out 0s !important;
 }
-
 
 footer{
   background-image: url(baby-784608_1920.jpg);
@@ -148,96 +143,108 @@ h2.hading {
   text-align:center;
 }
 
-.center-btn{
+.center-btn {
   text-align: center;
 }
 
-.form-item{
-    margin: 0;
-    font-family: serif;
-    font-size: inherit;
-    line-height: inherit;
+.form-item {
+  margin: 0;
+  font-family: serif;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-
-@media only screen and (max-width:991px){
+@media only screen and (max-width:991px) {
 .mypage-wrapper{
   margin-bottom: 20px;
-}
+  }
 .post-img {
   height: 200px;
- }
-.contact-form{
+  }
+.contact-form {
   display: block;
- }
- .row {
-  // display: block;
-}
-.col-10, .col-9, .col-6, .col-3, .col-5{
-    max-width: 100%;
- }
+  }
+.col-10, .col-9, .col-6, .col-3, .col-5 {
+  max-width: 100%;
+  }
 .offset-3, .offset-1, .offset-4, .offset-2 {
-    margin-left: 0%;
- }
+  margin-left: 0%;
+  }
 .card {
-    margin: 30px 0;
- }
+  margin: 30px 0;
+  }
 h1, .h1 {
-    font-size: 2rem;
- }
+  font-size: 2rem;
+  }
 form {
-    padding: 0 1.5em;
-    margin: 30px;
- }
+  padding: 0 1.5em;
+  margin: 30px;
+  }
 .diary-image, .weight-image, .post-image {
-    background: url(mediamodifier-fdPlZXc-ZwU-unsplash.jpg) no-repeat;
-    padding-top: 61.93333333%;
-    background-size: cover;
-    height: 300px;
- }
+  background: url(mediamodifier-fdPlZXc-ZwU-unsplash.jpg) no-repeat;
+  padding-top: 61.93333333%;
+  background-size: cover;
+  height: 300px;
+  }
 .container {
  padding-left: 0px;
  }
 }
 
-.weight-image{
+.mypage-image {
+  background-image: url(2021-10-11_22.12.00.png);
+  background-position: center;
+  background-size: cover;
+}
+.weight-image {
   background-image: url(2021-10-09_16.43.32.png);
   background-position: center;
   background-size: cover;
 }
-.diary-image{
+.diary-image {
   background-image: url(2021-10-09_16.43.23.png);
   background-position: center;
   background-size: cover;
 }
-.post-image{
+.post-image {
   background-image: url(2021-10-09_16.43.37.png);
   background-position: center;
   background-size: cover;
 }
 
-.diary-title{
+.mypage-title {
+  padding: 1rem 2rem;
+  background: #17F9AD;
+  background-image: radial-gradient(#B1F9D0 13%, transparent 13%), radial-gradient(#B1F9D0 13%, transparent 13%);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+}
+
+.diary-title {
   padding: 1rem 2rem;
   background: #FFFF55;
   background-image: radial-gradient(#FFFFBB 13%, transparent 13%), radial-gradient(#FFFFBB 13%, transparent 13%);
   background-size: 50px 50px;
   background-position: 0 0, 25px 25px;
 }
-.weight-title{
+
+.weight-title {
   padding: 1rem 2rem;
   background: #5D99FF;
   background-image: radial-gradient(#A4C6FF 13%, transparent 13%), radial-gradient(#A4C6FF 13%, transparent 13%);
   background-size: 50px 50px;
   background-position: 0 0, 25px 25px;
 }
-.post-title{
+
+.post-title {
   padding: 1rem 2rem;
   background: #FF69A3;
   background-image: radial-gradient(#FFABCE 13%, transparent 13%), radial-gradient(#FFABCE 13%, transparent 13%);
   background-size: 50px 50px;
   background-position: 0 0, 25px 25px;
 }
-.top-title{
+
+.top-title {
   padding: 1em 0;
 }
 
@@ -247,26 +254,30 @@ form {
   object-fit: cover;
 }
 
-.post-content{
+.post-content {
   padding-right: 0px;
   padding-left: 0px;
-
 }
-.card-right{
+
+.card-right {
   text-align: right;
 }
-.card-header{
+
+.card-header {
   background-color: #FFABCE;
 }
-.week_left{
+
+.week_left {
   text-align: right;
   font-size: 20px;
   margin-top: 10px;
 }
-.maternity-margin{
+
+.maternity-margin {
   margin-bottom: 30px;
 }
-.font-special{
+
+.font-special {
   transform: rotate(10deg);
   display: inline-block;
   color: #00FF00;
