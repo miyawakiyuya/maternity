@@ -1,5 +1,11 @@
+<% if @weight.errors.any? %>
+  <%= @weight.errors.count %>件のエラーが発生しました
+  <% @weight.errors.full_messages.each do |message| %>
+    <div class="message"><%= message %></div>
+  <% end %>
+<% end %>
 <div class="contact-form">
-  <div>
+  <div class="col-3">
   <%= form_with model: @weight, local:true do |f| %>
     <h4 class="hading">new weight</h4><br/>
     <div>

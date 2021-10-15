@@ -17,10 +17,18 @@ class WeightsController < ApplicationController
   end
 
   def create
-    weight = Weight.new(weight_params)
-    weight.user_id = current_user.id
-    weight.save
-    redirect_to weights_path
+    @weight = Weight.new(weight_params)
+    @weight.user_id = current_user.id
+    if @weight.save
+      redirect_to weights_path
+    else
+      @weights = current_user.weights.page(params[:page]).per(7).order(date: "desc")
+      @chart = []
+      @weights.each do |weight|
+       @chart.push([weight.date.to_datetime.strftime('%d日'), weight.weight])
+      end
+      render :index
+    end
   end
 
   def update

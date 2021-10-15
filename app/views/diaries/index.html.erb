@@ -1,25 +1,30 @@
+<% if @diary.errors.any? %>
+  <%= @diary.errors.count %>件のエラーが発生しました
+  <% @diary.errors.full_messages.each do |message| %>
+    <div class="message"><%= message %></div>
+  <% end %>
+<% end %>
 <div class="contact-form">
   <div>
-<%= form_with model: @diary, local:true do |f| %>
- <h4 class="hading">new diary</h4> <br/>
-  <%= f.date_field :start_time,class: "diaryform" %>
-  <%= f.text_field :title, placeholder: "タイトル",class: "diaryform" %>
-  <%= f.attachment_field :image, class: "diaryform" %>
-  <%= f.text_area :body, placeholder: "内容", class: "diaryform textarea" %>
-  <%= f.submit '投稿', class: "diaryform-btn semibold" %>
-<% end %>
-</div>
-<div class="col-9">
-<%= month_calendar events: @diaries do |date, diary| %>
-  <%= date.day %>
-  <% if diary.count > 0 %>
-    <%= link_to diary_path(date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s) do %>
-      <% diary. each do |d|%>
-       <%= d.title %><br/>
-      <% end %>
+  <%= form_with model: @diary, local:true do |f| %>
+    <h4 class="hading">new diary</h4> <br/>
+    <%= f.date_field :start_time,class: "diaryform" %>
+    <%= f.text_field :title, placeholder: "タイトル",class: "diaryform" %>
+    <%= f.attachment_field :image, class: "diaryform" %>
+    <%= f.text_area :body, placeholder: "内容", class: "diaryform textarea" %>
+    <%= f.submit '投稿', class: "diaryform-btn semibold" %>
     <% end %>
-
-  <%end%>
-<% end %>
-</div>
+  </div>
+  <div class="col-9">
+  <%= month_calendar events: @diaries do |date, diary| %>
+    <%= date.day %>
+    <% if diary.count > 0 %>
+      <%= link_to diary_path(date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s) do %>
+        <% diary. each do |d|%>
+         <%= d.title %><br/>
+        <% end %>
+      <% end %>
+    <%end%>
+  <% end %>
+  </div>
 </div>

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   patch 'users/my_page', to: 'users#show'
   get'users/quit'
   patch 'users/out',to: "users#out"
+  get 'users/',to: "users#new"
 
   resources :diaries
 

@@ -19,8 +19,13 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    @post.save
-    redirect_to posts_path
+    if @post.save
+      redirect_to posts_path
+    else
+      @posts = Post.page(params[:page]).page(params[:page]).per(7).reverse_order
+      @q = Post.ransack(params[:q])
+      render :index
+    end
   end
 
   def update
