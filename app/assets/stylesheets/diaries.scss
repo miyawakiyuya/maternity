@@ -1,35 +1,33 @@
 .diaryform {
   width: 100%;
   padding: 11px;
-  background:#FFFFAA;
-  border:1px solid rgba(0, 0, 0, 0.075);
-  margin-bottom:15px;
-  font-size:13px;
+  background: #FFFFAA;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  margin-bottom: 15px;
+  font-size: 13px;
 }
 
-.edit-diaryform-btn{
-  width: 30%;
-  padding:15px;
+.edit-diaryform-btn {
+  padding: 15px;
   background:#FFFF11;
-  border:none;
+  border: none;
   font-weight: bold;
 }
 
-.diaryform-btn{
+.diaryform-btn {
   width: 100%;
-  padding:15px;
+  padding: 15px;
   background:#FFFF11;
-  border:none;
+  border: none;
   font-weight: bold;
 }
-.textarea{
+.textarea {
   height: 110px;
   max-height: 200px;
   max-width: 100%;
  }
 
 .card {
-
   box-shadow: 0 2px 5px #ccc;
 }
 .card-content {
@@ -40,6 +38,7 @@
   margin-bottom: 20px;
   text-align: center;
 }
+
 .card-link {
   text-align: center;
   border-top: 1px solid #eee;
@@ -56,7 +55,7 @@
 
 .shad{
   font-size: 19px;
-  font-weight:bold;
+  font-weight: bold;
 }
 .search{
   text-align: center;
@@ -68,6 +67,7 @@
   min-width: 9rem;
   text-align: center;
 }
+
 .left{
   text-align: left;
 }

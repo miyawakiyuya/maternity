@@ -9,26 +9,25 @@
       <th width="15%">コメント</th>
     </tr>
   </thead>
-<% @results.each do |post| %>
-     <tbody>
+  <% @results.each do |post| %>
+  <tbody>
     <tr>
-      <td><%= post.user.updated_at.strftime('%Y/%m/%d') %> </td>
+      <td><%= post.user.updated_at.strftime('%Y/%m/%d') %></td>
       <td><%= post.user.name %></td>
       <td><%= post.title %></td>
       <td>
         <%= post.body %><br/>
         <% if post.user == current_user %>
-         <%= link_to "編集", edit_post_path(post),class: "fas fa-edit" %>
-         <%= link_to "削除", post_path(post), method: :delete,class: "fas fa-trash-alt", data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %>
+          <%= link_to "編集", edit_post_path(post),class: "fas fa-edit" %>
+          <%= link_to "削除", post_path(post), method: :delete,class: "fas fa-trash-alt", data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %>
         <% end %>
       </td>
       <td id="favorite_area_<%= post.id %>">
-         <%= render 'favorites/favorite',post: post %>
+        <%= render 'favorites/favorite',post: post %>
        </td>
       <td><%= link_to "コメント#{post.post_comments.count} ", post_path(post.id) %></td>
     </tr>
   </tbody>
-<% end %>
+  <% end %>
 </table>
-
 <%= link_to '戻る', posts_path %>

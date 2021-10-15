@@ -9,60 +9,59 @@
   <%= form_with model: @post, local:true do |f| %>
     <h4 class="hading">new post</h4> <br/>
     <div>
-     <%= f.text_field :title, placeholder: "タイトル",class: "postform" %>
+      <%= f.text_field :title, placeholder: "タイトル",class: "postform" %>
     </div>
     <div>
-     <%= f.text_area :body, placeholder: "内容",class: "postform" %>
+      <%= f.text_area :body, placeholder: "内容",class: "postform" %>
     </div>
     <div class="center-btn">
-     <%= f.submit '投稿', class: "postform-btn" %>
+      <%= f.submit '投稿', class: "postform-btn" %>
     </div>
   <% end %>
   </div>
-
-<div class="col-9">
-  <div class="search">
-  <%= search_form_for @q, url: search_posts_path do |f| %>
-  <%= f.search_field :title_cont, placeholder: "タイトル検索" %>
-  <%= f.button :type => "submit" do %>
-    <i class='fa fa-search'></i>
-  <% end %>
-  <% end %>
-  </div>
-  <div class="offset-2"><%= paginate @posts %></div>
-
-  <table class="offset-1">
-  <thead class="table table-bordered">
-    <tr class="table-danger">
-      <th>投稿日</th>
-      <th width="13%">名前</th>
-      <th width="17%">タイトル</th>
-      <th width="40%">内容</th>
-      <th width="15%">いいね</th>
-      <th width="15%">コメント</th>
-    </tr>
-  </thead>
-  <% @posts. each do |post|%>
-  <tbody class="table table-bordered">
-    <tr>
-      <td><%= post.user.created_at.strftime('%Y/%m/%d') %> </td>
-      <td><%= post.user.name %></td>
-      <td><%= post.title %></td>
-      <td>
-        <%= post.body %><br/>
-        <% if post.user == current_user %>
-         <%= link_to "編集", edit_post_path(post),class: "fas fa-edit" %>
-         <%= link_to "削除", post_path(post), method: :delete,class: "fas fa-trash-alt", data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %>
+  <div class="col-9">
+    <div class="search"><br/>
+      <%= search_form_for @q, url: search_posts_path do |f| %>
+        <%= f.search_field :title_cont, placeholder: "タイトル検索" %>
+        <%= f.button :type => "submit" do %>
+          <i class='fa fa-search'></i>
         <% end %>
-      </td>
-      <td id="favorite_area_<%= post.id %>">
-         <%= render 'favorites/favorite',post: post %>
-       </td>
-      <td><%= link_to "コメント#{post.post_comments.count} ", post_path(post.id) %></td>
-    </tr>
-  </tbody>
-  <% end %>
-</table>
+      <% end %>
+    </div>
+    <div class="offset-2"><%= paginate @posts %></div>
+    <table class="offset-1 main-not">
+      <thead class="table table-bordered">
+        <tr class="table-danger">
+          <th>投稿日</th>
+          <th width="13%">名前</th>
+          <th width="17%">タイトル</th>
+          <th width="40%">内容</th>
+          <th width="14%">いいね</th>
+          <th width="15%">コメント</th>
+        </tr>
+      </thead>
+      <% @posts. each do |post|%>
+      <tbody class="table table-bordered">
+        <tr>
+          <td><%= post.user.created_at.strftime('%Y/%m/%d') %> </td>
+          <td><%= post.user.name %></td>
+          <td><%= post.title %></td>
+          <td>
+            <%= post.body %><br/>
+            <% if post.user == current_user %>
+              <%= link_to "編集", edit_post_path(post),class: "fas fa-edit" %>
+              <%= link_to "削除", post_path(post), method: :delete,class: "fas fa-trash-alt", data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %>
+            <% end %>
+          </td>
+          <td id="favorite_area_<%= post.id %>">
+            <%= render 'favorites/favorite',post: post %>
+           </td>
+          <td><%= link_to "コメント#{post.post_comments.count} ", post_path(post.id) %></td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
 </div>
 
 

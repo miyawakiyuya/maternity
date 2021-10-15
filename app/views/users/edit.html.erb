@@ -1,7 +1,7 @@
 <div class="form-wrapper">
 	<h2>会員情報編集</h2>
 	<%= form_with model: @user, url: users_path, local:true do |f| %>
-	 <table height="400" style="font-size : 20px;" >
+	<table height="400" style="font-size : 20px;" >
     <tr>
       <td width="30%">氏名</td>
       <td width="40%"><%= f.text_field :name,class:"form" %></td>
@@ -19,9 +19,9 @@
     </tr>
     <tr>
       <td></td>
-      <td> <%= f.submit '編集内容を保存',class:"btn btn-success" %></td>
-      <td> <%= link_to " 退会する", users_quit_path, class: "btn btn-danger" %></td>
+      <td><%= f.submit '編集内容を保存',class:"btn btn-success" %></td>
+      <td><%= link_to " 退会する", users_quit_path, class: "btn btn-danger" %></td>
     </tr>
-   </table>
+  </table>
   <% end %>
 </div>

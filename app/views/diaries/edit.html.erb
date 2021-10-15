@@ -2,10 +2,10 @@
 <%= form_with model: @diary, local:true do |f| %>
 <form action="">
   <div class="diary-editform">
-  <p class="left"><%= f.attachment_field :image,class: "diaryeform" %></p>
-  <%= f.text_field :title,class: "diaryform" %>
-  <%= f.text_area :body,class: "diaryform" %>
-  <%= f.submit '変更を保存', class: "edit-diaryform-btn" %>
+    <p class="left"><%= f.attachment_field :image,class: "diaryeform" %></p>
+    <%= f.text_field :title,class: "diaryform" %>
+    <%= f.text_area :body,class: "diaryform" %>
+    <%= f.submit '変更を保存', class: "edit-diaryform-btn" %>
 </div>
 </form>
 <% end %>

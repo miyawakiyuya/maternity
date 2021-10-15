@@ -18,15 +18,15 @@
       <%= f.date_field :date, autofocus: true,class:"form" %>
     </div>
     <div class="form-item">
-       <%= f.label :password,"パスワード" %><br/>
-       <% if @minimum_password_length %>
-       <em>(<%= @minimum_password_length %> 文字以上)</em>
-       <% end %><br />
-       <%= f.password_field :password, autocomplete: "new-password",class:"form" %>
+      <%= f.label :password,"パスワード" %><br/>
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> 文字以上)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password",class:"form" %>
     </div>
     <div class="form-item">
       <%= f.label :password_confirmation,"パスワード（確認用）" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form" %>
     </div>
     <div class="button-panel">
       <%= f.submit "新規登録",class:"form-btn" %>

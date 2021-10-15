@@ -25,28 +25,28 @@
 </div>
 
 <div class="weight offset-3">
-<table class="table table-bordered">
-  <thead>
-    <tr class="table-info">
-      <th width="30%">日付</th>
-      <th width="30%">体重</th>
-      <th width="40%">編集</th>
-    </tr>
-  </thead>
-  <%= paginate @weights %>
-  <% @weights. each do |weight|%>
-  <tbody>
-    <tr>
-      <td><%= weight.date %></td>
-      <td><%= weight.weight %>kg</td>
-      <td>
-        <% if weight.user == current_user %>
-         <%= link_to "編集", edit_weight_path(weight),class: "fas fa-edit" %>
-         <%= link_to "削除", weight_path(weight), method: :delete,class: "fas fa-trash-alt" %>
-        <% end %>
-      </td>
-    </tr>
-  </tbody>
-  <% end %>
-</table>
+  <table class="table table-bordered">
+    <thead>
+      <tr class="table-info">
+        <th width="30%">日付</th>
+        <th width="30%">体重</th>
+        <th width="40%">編集</th>
+      </tr>
+    </thead>
+    <%= paginate @weights %>
+    <% @weights. each do |weight|%>
+    <tbody>
+      <tr>
+        <td><%= weight.date %></td>
+        <td><%= weight.weight %>kg</td>
+        <td>
+          <% if weight.user == current_user %>
+            <%= link_to "編集", edit_weight_path(weight),class: "fas fa-edit" %>
+            <%= link_to "削除", weight_path(weight), method: :delete,class: "fas fa-trash-alt" %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
 </div>

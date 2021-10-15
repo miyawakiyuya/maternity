@@ -39,23 +39,23 @@ h4.hading {
   padding: 1rem 2rem;
   border-top: 3px dotted #000;
   border-bottom: 3px dotted #000;
-  text-align:center;
+  text-align: center;
 }
 
 .form {
   width: 100%;
   padding: 15px;
-  margin-bottom:25px;
-  font-size:13px;
+  margin-bottom: 25px;
+  font-size: 13px;
   max-width: 300px;
 }
 
 .form-btn {
-  width:200px;
-  padding:15px;
-  background:#66CC99;
-  color:#fff;
-  border:none;
+  width: 60%;
+  padding: 15px;
+  background: #66CC99;
+  color: #fff;
+  border: none;
   font-weight: bold;
   text-align: center;
 }
@@ -64,8 +64,6 @@ h4.hading {
   display: flex;
   margin: 0 auto;
 }
-
-
 
 .form-wrapper {
   background-image: url(mediamodifier-fdPlZXc-ZwU-unsplash.jpg);
@@ -88,6 +86,15 @@ h4.hading {
 
 .maternity-week {
   background-image: url(henley-design-studio-3qehZLBDsEQ-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 0 1em;
+  max-width: 500px;
+  text-align: center;
+}
+
+.post-week {
+  background-image: url(sharon-mccutcheon-NkQD-RHhbvY-unsplash.jpg);
   background-size: cover;
   background-position: center;
   padding: 0 1em;
@@ -140,7 +147,7 @@ h2.hading {
   padding: 1rem 2rem;
   border-top: 3px dotted #000;
   border-bottom: 3px dotted #000;
-  text-align:center;
+  text-align: center;
 }
 
 .center-btn {
@@ -154,42 +161,7 @@ h2.hading {
   line-height: inherit;
 }
 
-@media only screen and (max-width:991px) {
-.mypage-wrapper{
-  margin-bottom: 20px;
-  }
-.post-img {
-  height: 200px;
-  }
-.contact-form {
-  display: block;
-  }
-.col-10, .col-9, .col-6, .col-3, .col-5 {
-  max-width: 100%;
-  }
-.offset-3, .offset-1, .offset-4, .offset-2 {
-  margin-left: 0%;
-  }
-.card {
-  margin: 30px 0;
-  }
-h1, .h1 {
-  font-size: 2rem;
-  }
-form {
-  padding: 0 1.5em;
-  margin: 30px;
-  }
-.diary-image, .weight-image, .post-image {
-  background: url(mediamodifier-fdPlZXc-ZwU-unsplash.jpg) no-repeat;
-  padding-top: 61.93333333%;
-  background-size: cover;
-  height: 300px;
-  }
-.container {
- padding-left: 0px;
- }
-}
+
 
 .mypage-image {
   background-image: url(2021-10-11_22.12.00.png);
@@ -287,3 +259,52 @@ form {
     color:#FF0000;
     padding:12px; font-weight:850;
   }
+
+@media only screen and (max-width:991px) {
+.mypage-wrapper {
+  margin-bottom: 20px;
+  }
+.post-img {
+  height: 200px;
+  }
+.contact-form {
+  display: block;
+  }
+.col-10, .col-9, .col-6, .col-3, .col-5 {
+  max-width: 100%;
+  }
+.offset-3, .offset-1, .offset-4, .offset-2 {
+  margin-left: 0%;
+  }
+.mypage-image {
+  height: 100px;
+  }
+top-title {
+  padding: 0 1.5em;
+  }
+.card {
+  margin: 30px 0;
+  }
+h1, .h1 {
+  font-size: 2rem;
+  }
+form {
+  padding: 0 1.5em;
+  margin: 30px;
+  }
+.diary-image, .weight-image, .post-image {
+  background: url(mediamodifier-fdPlZXc-ZwU-unsplash.jpg) no-repeat;
+  padding-top: 61.93333333%;
+  background-size: cover;
+  height: 300px;
+  }
+.container {
+  padding-left: 0px;
+  }
+.main-not {
+  margin: -2rem;
+  }
+.navbar-brand {
+  white-space: normal;
+  }
+}

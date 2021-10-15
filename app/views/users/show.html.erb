@@ -1,5 +1,5 @@
 <div class="contact-form">
- <div class="mypage-wrapper col-5">
+  <div class="mypage-wrapper col-5">
   <h2><span><%= @user.name %>さんの会員情報</span></h2>
   <table height="350" style="font-size : 25px;">
    	<tr>
@@ -17,11 +17,11 @@
 		<tr>
 		  <td>会員ステータス</td>
       <td>
-    	<% if @user.is_valid %>
-	     <p class="text-success">有効</p>
-	    <% else %>
-	     <p class="text-danger">退会</p>
-		  <% end %>
+    	  <% if @user.is_valid %>
+	        <p class="text-success">有効</p>
+	      <% else %>
+	        <p class="text-danger">退会</p>
+		    <% end %>
       </td>
 		</tr>
 		<tr>
@@ -29,10 +29,10 @@
       <td><%= link_to "編集する", edit_users_path, class: "btn btn-success" %>
     </tr>
   </table>
- </div>
+  </div>
 	<div class="maternity-week offset-2 col-5">
 		<h6 class="week_left"><%= Date.today.strftime('%Y年%-m月%d日') %><h6>
-			<% d = 280 - (@user.date.to_date - Date.today) %>
+		  <% d = 280 - (@user.date.to_date - Date.today) %>
 			<% w = 40 - (( @user.date.to_date - Date.today) / 7).to_f %>
 			<% day = ((w - w.to_i)*7).round %>
 		<h4 class="maternity-margin">予定日</h4>
