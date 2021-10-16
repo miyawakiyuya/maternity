@@ -12,6 +12,14 @@ class UsersController < ApplicationController
 
   def show
    @user = current_user
+   @week =  40 - (( @user.date.to_date - Date.today) / 7).to_f
+   @week_day = ((@week - @week.to_i)*7).round
+   @day = @user.date.to_date - Date.today
+   if @day >= 0
+    @day
+   else
+    @day = 0
+   end
   end
 
   def edit

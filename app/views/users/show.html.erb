@@ -32,13 +32,10 @@
   </div>
 	<div class="maternity-week offset-2 col-5">
 		<h6 class="week_left"><%= Date.today.strftime('%Y年%-m月%d日') %><h6>
-		  <% d = 280 - (@user.date.to_date - Date.today) %>
-			<% w = 40 - (( @user.date.to_date - Date.today) / 7).to_f %>
-			<% day = ((w - w.to_i)*7).round %>
 		<h4 class="maternity-margin">予定日</h4>
 		<h3 class="maternity-margin"><%= @user.date.strftime('%Y年%-m月%d日') %></h3>
 		<h4 class="maternity-margin">現在の週数</h4>
-		<h1 class="maternity-margin font-special"><%= w.to_i %>週目<%= day %>日</h1>
-		<h6 class="maternity-margin">出産まで残り<%= 280 - d.to_i %>日</h6>
+		<h1 class="maternity-margin font-special"><%= @week.to_i %>週目<%= @week_day %>日</h1>
+		<h6 class="maternity-margin">出産まで残り<%= @day.to_i %>日</h6>
 	</div>
 </div>
