@@ -66,7 +66,7 @@ h4.hading {
 }
 
 .form-wrapper {
-  background-image: image-url(mediamodifier-fdPlZXc-ZwU-unsplash.jpg);
+  background-image: image-url('mediamodifier-fdPlZXc-ZwU-unsplash.jpg');
   background-size: cover;
   background-position: center;
   margin: auto;
@@ -76,7 +76,7 @@ h4.hading {
 }
 
 .mypage-wrapper {
-  background-image: image-url(mediamodifier-fdPlZXc-ZwU-unsplash.jpg);
+  background-image: image-url('mediamodifier-fdPlZXc-ZwU-unsplash.jpg');
   background-size: cover;
   background-position: center;
   padding: 0 1em;
@@ -85,7 +85,7 @@ h4.hading {
 }
 
 .maternity-week {
-  background-image: image-url(henley-design-studio-3qehZLBDsEQ-unsplash.jpg);
+  background-image: image-url('henley-design-studio-3qehZLBDsEQ-unsplash.jpg');
   background-size: cover;
   background-position: center;
   padding: 0 1em;
@@ -94,7 +94,7 @@ h4.hading {
 }
 
 .post-week {
-  background-image: image-url(sharon-mccutcheon-NkQD-RHhbvY-unsplash.jpg);
+  background-image: image-url('sharon-mccutcheon-NkQD-RHhbvY-unsplash.jpg');
   background-size: cover;
   background-position: center;
   padding: 0 1em;
@@ -126,7 +126,7 @@ input:-webkit-autofill {
 }
 
 footer{
-  background-image: image-url(baby-784608_1920.jpg);
+  background-image: image-url('baby-784608_1920.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -164,22 +164,22 @@ h2.hading {
 
 
 .mypage-image {
-  background-image: image-url(2021-10-11_22.12.00.png);
+  background-image: image-url('2021-10-11_22.12.00.png');
   background-position: center;
   background-size: cover;
 }
 .weight-image {
-  background-image: image-url(2021-10-09_16.43.32.png);
+  background-image: image-url('2021-10-09_16.43.32.png');
   background-position: center;
   background-size: cover;
 }
 .diary-image {
-  background-image: image-url(2021-10-09_16.43.23.png);
+  background-image: image-url('2021-10-09_16.43.23.png');
   background-position: center;
   background-size: cover;
 }
 .post-image {
-  background-image: image-url(2021-10-09_16.43.37.png);
+  background-image: image-url('2021-10-09_16.43.37.png');
   background-position: center;
   background-size: cover;
 }
@@ -293,7 +293,7 @@ form {
   margin: 30px;
   }
 .diary-image, .weight-image, .post-image {
-  background: image-url(mediamodifier-fdPlZXc-ZwU-unsplash.jpg) no-repeat;
+  background: image-url('mediamodifier-fdPlZXc-ZwU-unsplash.jpg') no-repeat;
   padding-top: 61.93333333%;
   background-size: cover;
   height: 300px;
