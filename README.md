@@ -58,10 +58,12 @@ https://app.diagrams.net/#G166wIqoubTekxlNwXn06alsWtFaKka82z
 
 ## 開発環境
 - OS：Linux(CentOS)
-- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- 言語：HTML,CSS,JavaScript,Ruby,MySQL
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
-- IDE：Cloud9
+- IDE：AWS Cloud9
+- サバー: AWS EC2
+- データーベース: AWS RDS
 
 ## 使用素材
 - O-DAN（写真素材）
