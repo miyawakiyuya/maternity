@@ -10,12 +10,15 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :users, only: [:edit,:update]
-  get 'users/my_page', to: 'users#show'
-  patch 'users/my_page', to: 'users#show'
-  get'users/quit'
-  patch 'users/out',to: "users#out"
-  get 'users/',to: "users#new"
+  resource :users, only: [:edit,:update] do
+    collection do
+      get :my_page, to: 'users#show'
+      patch :my_page, to: 'users#show'
+      get :quit
+      patch :out,to: "users#out"
+      get :new ,to: "users#new"
+    end
+  end
 
   resources :diaries
 

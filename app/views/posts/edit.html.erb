@@ -1,10 +1,8 @@
 <h2 class="hading offset-3 col-6">投稿編集</h4>
 <%= form_with model: @post, local:true do |f| %>
-<form action="">
   <p class="editform">
     <%= f.text_field :title,class: "postform" %>
     <%= f.text_area :body,class: "postform" %>
     <%= f.submit "変更",class:"postform-btn" %>
   </p>
-</form>
 <% end %>

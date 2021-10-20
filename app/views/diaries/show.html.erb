@@ -1,24 +1,23 @@
 <h4 class="hading col-3">todays,diary</h4>
-<div class="contact-form">
-  <div class="row">
-    <% @diaries.each do |diary| %>
-    <div class="col-md-4">
-      <section class="card">
-        <div class="card-img-top">
-          <%= attachment_image_tag diary, :image, fallback: "noimage-760x460", class: "img-fluid post-img"%>
-        </div>
-        <div class="card-content">
-          <h1 class="card-title"><%= diary.title %></h1>
-          <p class="card-text"><%= diary.body %></p>
-        </div>
-        <div class="card-link">
-          <%= link_to "投稿編集", edit_diary_path(diary.id),class:"fas fa-edit" %>
-          <%= link_to "投稿削除", diary_path(diary.id), method: :delete, class: 'fas fa-trash-alt', data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %>
-        </div>
-      </section>
-    </div>
-    <% end %>
+<div class="row">
+  <% @diaries.each do |diary| %>
+  <div class="col-md-4">
+    <section class="card">
+      <div class="card-img-top">
+        <%= attachment_image_tag diary, :image, fallback: "noimage-760x460", class: "img-fluid post-img"%>
+      </div>
+      <div class="card-content">
+        <h1 class="card-title"><%= diary.title %></h1>
+        <p class="card-text"><%= diary.body %></p>
+      </div>
+      <div class="card-link">
+        <%= link_to "投稿編集", edit_diary_path(diary.id),class:"fas fa-edit" %>
+        <%= link_to "投稿削除", diary_path(diary.id), method: :delete, class: 'fas fa-trash-alt', data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %>
+      </div>
+    </section>
   </div>
+  <% end %>
 </div>
+
 
 

@@ -7,7 +7,7 @@ class UsersController < ApplicationController
    user = User.new(user_params)
    user.user_id = current_user.id
    user.save
-   redirect_to users_my_page_path(current_user)
+   redirect_to my_page_users_path(current_user)
   end
 
   def show
@@ -27,10 +27,9 @@ class UsersController < ApplicationController
   end
 
   def update
-  # binding.pry
    @user = current_user
    @user.update(user_params)
-   redirect_to users_my_page_path(current_user)
+   redirect_to my_page_users_path(current_user)
   end
 
   def quit

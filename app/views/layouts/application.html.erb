@@ -22,7 +22,7 @@
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
                 <li class="nav-item">
-                  <%= link_to "MYPAGE", users_my_page_path, class: 'nav-link text-success fas fa-user-cog' %>
+                  <%= link_to "MYPAGE", my_page_users_path, class: 'nav-link text-success fas fa-user-cog' %>
                 </li>
                 <li class="nav-item">
                   <%= link_to "DIARY", diaries_path, class: 'nav-link text-warning fas fa-book' %>

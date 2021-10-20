@@ -47,7 +47,7 @@
           <td><%= post.user.name %></td>
           <td><%= post.title %></td>
           <td>
-            <%= post.body %><br/>
+            <%= post.body.truncate(30) %><br/>
             <% if post.user == current_user %>
               <%= link_to "編集", edit_post_path(post),class: "fas fa-edit" %>
               <%= link_to "削除", post_path(post), method: :delete,class: "fas fa-trash-alt", data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %>
